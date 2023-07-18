@@ -1,0 +1,296 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div  class="row">
+        <div cdkDrag class="col-xl-4 col-lg-6">
+          <div   class="card card-stats mb-4 mb-xl-0 moveCrsr">
+            <div  class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Total Revenue</h5>
+                  <span class="h2 font-weight-bold mb-0">350,897</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">
+                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                <span class="text-nowrap">Since last month</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div  cdkDrag    class="col-xl-4 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0 moveCrsr">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Active Students</h5>
+                  <span class="h2 font-weight-bold mb-0">2,356</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                    <i class="fas fa-chart-pie"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">
+                <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
+                <span class="text-nowrap">Since last week</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div   cdkDrag   class="col-xl-4 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0 moveCrsr">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Number of Classes</h5>
+                  <span class="h2 font-weight-bold mb-0">9</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                    <i class="fas fa-users"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-muted text-sm">
+                <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                <span class="text-nowrap">Since yesterday</span>
+              </p>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid mt--7">
+  <div class="row">
+
+    <!-- Course Sale bar Grph Start -->
+    <div  cdkDrag class="col-xl-8 mb-5 mb-xl-0 moveCrsr">
+      <div class="card bg-gradient-default shadow">
+        <div class="card-header bg-transparent">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
+              <h2 class="text-white mb-0">Course Sold</h2>
+            </div>
+            <!-- <div class="col">
+              <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales"  (click)="data=datasets[0];updateOptions()">
+                  <a href="javascript:void(0)" class="nav-link py-2 px-3" [ngClass]="{'active':clicked===true}" data-toggle="tab" (click)="clicked=true;clicked1=false">
+                    <span class="d-none d-md-block">Month</span>
+                    <span class="d-md-none">M</span>
+                  </a>
+                </li>
+                <li class="nav-item" data-toggle="chart" data-target="#chart-sales"  (click)="data=datasets[1];updateOptions()">
+                  <a href="javascript:void(0)" class="nav-link py-2 px-3" [ngClass]="{'active':clicked1===true}" data-toggle="tab" (click)="clicked=false;clicked1=true">
+                    <span class="d-none d-md-block">Week</span>
+                    <span class="d-md-none">W</span>
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- Chart -->
+          <div class="chart">
+            <!-- Chart wrapper -->
+            <canvas id="chart-sales" class="chart-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Course Sale bar Grph End  -->
+
+     <!-- Course Sale bar Grph Start -->
+    <div cdkDrag class="col-xl-4 moveCrsr">
+      <div class="card shadow">
+        <div class="card-header bg-transparent">
+          <div class="row align-items-center">
+            <div class="col">
+              <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
+              <h2 class="mb-0">Students Age Group Wise</h2>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <!-- Chart -->
+          <div class="chart">
+            <canvas id="chart-orders" class="chart-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Course Sale bar Grph Start -->
+
+  </div>
+  <div  cdkDrag class="row mt-5 moveCrsr ">
+    <div class="col-xl-6">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0"> All Courses </h3>
+            </div>
+            
+          </div>
+        </div>
+        <div class="table-responsive">
+          <!-- Projects table -->
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Number of Students</th>
+                <th scope="col"> Action  </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  Introduction to Python
+                </th>
+                <td>
+                 4
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <a (click)="createComponent('Python')"   href="#!" class="btn btn-info">View Details</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Introduction to C++
+                </th>
+                <td>
+                 4
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <a  (click)="createComponent('C++')"   href="#!" class="btn btn-info">View Details</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Introduction to Web3
+                </th>
+                <td>
+                 4
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <a href="#!" (click)="createComponent('Web 3')"   class="btn btn-info">View Details</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Introduction to AWS
+                </th>
+                <td>
+                 4
+                </td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <a href="#!" (click)="createComponent('AWS')"   class="btn btn-info">View Details</a>
+                  </div>
+                </td>
+              </tr>
+
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 mb-5 mb-xl-0">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">All Students List</h3>
+            </div>
+            <!-- <div class="col text-right">
+              <a href="#!" class="btn btn-sm btn-primary">See all</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="table-responsive">
+          <!-- Projects table -->
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Student Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Enrolled On</th>
+                <th scope="col">Amount Paid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  James Does
+                </th>
+                <td>
+                  14
+                </td>
+                <td>
+                  24 Feb 2023
+                </td>
+                <td>
+                 AED 1200 
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  James Does
+                </th>
+                <td>
+                  14
+                </td>
+                <td>
+                  24 Feb 2023
+                </td>
+                <td>
+                 AED 1200 
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+   
+  </div>
+
+  <!-- Dynamic Controller Container -->
+  <div cdkDrag class="row mt-5 ml-6 moveCrsr">
+    <ng-container #container></ng-container>
+  </div>
+  <!-- Dynamic Controller Container -->
+
+
+
+
+</div>
