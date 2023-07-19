@@ -295,7 +295,7 @@ export const chartExample1 = {
         ticks: {
           callback: function(value) {
             if (!(value % 10)) {
-              return 'AED ' + value + 'k';
+              return 'AED ' + value ;
             }
           }
         }
@@ -306,7 +306,7 @@ export const chartExample1 = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',  ],
     datasets: [{
       label: 'Revenue Generated',
-      data: [11000, 11000, 5500, 19500, 13000, 32500,]
+      data: [11000, 11000, 5500, 19500, 13000, 32500]
     }]
   }
 }

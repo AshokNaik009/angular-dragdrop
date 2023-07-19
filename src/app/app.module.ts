@@ -15,6 +15,8 @@ import { ComponentsModule } from './components/components.module';
 // import {CdkDrag} from '@angular/cdk/drag-drop';
 import {DragDropModule } from   '@angular/cdk/drag-drop';
 
+import { ApiService } from "../service/apiservice";
+
 
 @NgModule({
   imports: [
@@ -33,7 +35,7 @@ import {DragDropModule } from   '@angular/cdk/drag-drop';
     AdminLayoutComponent
   
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@
       <div class="card-header border-0">
         <div class="row align-items-center">
           <div class="col">
-            <h3     class="mb-0">All Students in {{ name }} course </h3>
+            <h3   *ngIf="tblData"  class="mb-0">All Students in {{ tblData[0].courseName }} course </h3>
           </div>
           <div class="col text-right">
             <a  (click)="removeSection()"  href="#!" class="btn btn-sm btn-primary">close</a>
@@ -21,38 +21,42 @@
               <th scope="col">Student Name</th>
               <th scope="col">Age</th>
               <th scope="col">Enrolled On</th>
+              <th scope="col">Payment Mode</th>
+              <th scope="col">Major</th>
               <th scope="col">Amount Paid</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+
+            <tr *ngFor = "let title of tblData"  >
               <th scope="row">
-                James Does
+                {{ title.student.name }}
               </th>
               <td>
-                14
+                {{ title.student.age }}
               </td>
               <td>
-                24 Feb 2023
+                {{ title.createdAt | date }}
               </td>
+
               <td>
-               AED 1200 
+                {{ title.paymentMode
+                   }}
+              </td>
+
+              <td>
+                {{ title.student.majorIn }}
+                  
+                   
+              </td>
+
+
+              <td>
+                AED {{ title.amount }}
               </td>
             </tr>
-            <tr>
-              <th scope="row">
-                James Does
-              </th>
-              <td>
-                14
-              </td>
-              <td>
-                24 Feb 2023
-              </td>
-              <td>
-               AED 1200 
-              </td>
-            </tr>
+
+           
            
           </tbody>
         </table>

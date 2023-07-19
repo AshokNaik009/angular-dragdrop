@@ -86,22 +86,7 @@
               <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
               <h2 class="text-white mb-0">Course Sold</h2>
             </div>
-            <!-- <div class="col">
-              <ul class="nav nav-pills justify-content-end">
-                <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales"  (click)="data=datasets[0];updateOptions()">
-                  <a href="javascript:void(0)" class="nav-link py-2 px-3" [ngClass]="{'active':clicked===true}" data-toggle="tab" (click)="clicked=true;clicked1=false">
-                    <span class="d-none d-md-block">Month</span>
-                    <span class="d-md-none">M</span>
-                  </a>
-                </li>
-                <li class="nav-item" data-toggle="chart" data-target="#chart-sales"  (click)="data=datasets[1];updateOptions()">
-                  <a href="javascript:void(0)" class="nav-link py-2 px-3" [ngClass]="{'active':clicked1===true}" data-toggle="tab" (click)="clicked=false;clicked1=true">
-                    <span class="d-none d-md-block">Week</span>
-                    <span class="d-md-none">W</span>
-                  </a>
-                </li>
-              </ul>
-            </div> -->
+            
           </div>
         </div>
         <div class="card-body">
@@ -138,7 +123,7 @@
 
   </div>
   <div  cdkDrag class="row mt-5 moveCrsr ">
-    <div class="col-xl-6">
+    <div class="col-xl-12">
       <div class="card shadow">
         <div class="card-header border-0">
           <div class="row align-items-center">
@@ -154,63 +139,43 @@
             <thead class="thead-light">
               <tr>
                 <th scope="col">Name</th>
-                <th scope="col">Number of Students</th>
+                <th scope="col">Fees</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Category</th>
+                <th scope="col">Start Date</th>
                 <th scope="col"> Action  </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor = "let title of allcourses" >
                 <th scope="row">
-                  Introduction to Python
+                 {{ title.courseName }}
                 </th>
+
+                <th scope="row">
+                  {{ title.durationinMonth }} months
+                 </th>
+
+
                 <td>
-                 4
+                 AED  {{ title.fees }}
                 </td>
+                <td>
+                  {{ title.subject }}
+                </td>
+                <td>
+                  {{ title.startDate | date  }}
+                </td>
+
                 <td>
                   <div class="d-flex align-items-center">
-                    <a (click)="createComponent('Python')"   href="#!" class="btn btn-info">View Details</a>
+                    <a (click)="createComponent(title.courseName)"   href="#!" class="btn btn-info">View Details</a>
                   </div>
                 </td>
+
               </tr>
-              <tr>
-                <th scope="row">
-                  Introduction to C++
-                </th>
-                <td>
-                 4
-                </td>
-                <td>
-                  <div class="d-flex align-items-center">
-                    <a  (click)="createComponent('C++')"   href="#!" class="btn btn-info">View Details</a>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  Introduction to Web3
-                </th>
-                <td>
-                 4
-                </td>
-                <td>
-                  <div class="d-flex align-items-center">
-                    <a href="#!" (click)="createComponent('Web 3')"   class="btn btn-info">View Details</a>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  Introduction to AWS
-                </th>
-                <td>
-                 4
-                </td>
-                <td>
-                  <div class="d-flex align-items-center">
-                    <a href="#!" (click)="createComponent('AWS')"   class="btn btn-info">View Details</a>
-                  </div>
-                </td>
-              </tr>
+
+             
 
              
             </tbody>
@@ -219,64 +184,7 @@
       </div>
     </div>
 
-    <div class="col-xl-6 mb-5 mb-xl-0">
-      <div class="card shadow">
-        <div class="card-header border-0">
-          <div class="row align-items-center">
-            <div class="col">
-              <h3 class="mb-0">All Students List</h3>
-            </div>
-            <!-- <div class="col text-right">
-              <a href="#!" class="btn btn-sm btn-primary">See all</a>
-            </div> -->
-          </div>
-        </div>
-        <div class="table-responsive">
-          <!-- Projects table -->
-          <table class="table align-items-center table-flush">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">Student Name</th>
-                <th scope="col">Age</th>
-                <th scope="col">Enrolled On</th>
-                <th scope="col">Amount Paid</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">
-                  James Does
-                </th>
-                <td>
-                  14
-                </td>
-                <td>
-                  24 Feb 2023
-                </td>
-                <td>
-                 AED 1200 
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  James Does
-                </th>
-                <td>
-                  14
-                </td>
-                <td>
-                  24 Feb 2023
-                </td>
-                <td>
-                 AED 1200 
-                </td>
-              </tr>
-             
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+   
 
 
     
@@ -285,7 +193,7 @@
   </div>
 
   <!-- Dynamic Controller Container -->
-  <div cdkDrag class="row mt-5 ml-6 moveCrsr">
+  <div cdkDrag  class="row mt-5 ml-6 moveCrsr">
     <ng-container #container></ng-container>
   </div>
   <!-- Dynamic Controller Container -->
