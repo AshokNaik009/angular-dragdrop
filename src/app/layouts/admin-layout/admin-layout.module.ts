@@ -11,7 +11,7 @@ import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {DragDropModule } from   '@angular/cdk/drag-drop';
+import {DragDropModule  } from   '@angular/cdk/drag-drop';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({

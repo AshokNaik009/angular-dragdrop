@@ -5,11 +5,13 @@
       <div  class="row">
         <div cdkDrag class="col-xl-4 col-lg-6">
           <div   class="card card-stats mb-4 mb-xl-0 moveCrsr">
+           
+
             <div  class="card-body">
               <div class="row">
                 <div class="col">
                   <h5 class="card-title text-uppercase text-muted mb-0">Total Revenue</h5>
-                  <span class="h2 font-weight-bold mb-0">350,897</span>
+                  <span class="h2 font-weight-bold mb-0"> AED {{ totrev }}</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -19,7 +21,7 @@
               </div>
               <p class="mt-3 mb-0 text-muted text-sm">
                 <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                <span class="text-nowrap">Since last month</span>
+                <span class="text-nowrap">Since last year</span>
               </p>
             </div>
           </div>
@@ -30,7 +32,7 @@
               <div class="row">
                 <div class="col">
                   <h5 class="card-title text-uppercase text-muted mb-0">Active Students</h5>
-                  <span class="h2 font-weight-bold mb-0">2,356</span>
+                  <span class="h2 font-weight-bold mb-0">{{ allcoursesrev.length   }}</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -50,8 +52,8 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-                  <h5 class="card-title text-uppercase text-muted mb-0">Number of Classes</h5>
-                  <span class="h2 font-weight-bold mb-0">9</span>
+                  <h5 class="card-title text-uppercase text-muted mb-0">Number of Active Courses</h5>
+                  <span class="h2 font-weight-bold mb-0"> {{ allcourses.length  }}</span>
                 </div>
                 <div class="col-auto">
                   <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
@@ -61,7 +63,7 @@
               </div>
               <p class="mt-3 mb-0 text-muted text-sm">
                 <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
-                <span class="text-nowrap">Since yesterday</span>
+                <span class="text-nowrap">Since Last Year</span>
               </p>
             </div>
           </div>

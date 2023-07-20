@@ -31,6 +31,8 @@ export class DashboardComponent implements OnInit {
   public allcourses:any = [];
   public allcoursesrev:any = [];
 
+  public totrev:any; 
+
   @ViewChild('container', { read: ViewContainerRef })
   container!: ViewContainerRef; 
 
@@ -60,6 +62,14 @@ export class DashboardComponent implements OnInit {
 
     this.apiService.getAllCourseRevByTeacher().subscribe((res:any)=>{
       console.log("Reveneue-->",res.data.data);
+
+      this.allcoursesrev = res.data.data;
+
+      this.totrev =  this.allcoursesrev.reduce((accumulator, object) => {
+        return accumulator + object.amount;
+      }, 0);
+
+
       localStorage.setItem("courseDt",JSON.stringify(res.data.data));
 
     })
@@ -144,9 +154,7 @@ export class DashboardComponent implements OnInit {
     this.salesChart.update();
   }
 
-  parentfunction(data) {
-    console.log("data--->",data)
-  }
+  
 
   createComponent(courseName) {
 
@@ -194,9 +202,7 @@ export class DashboardComponent implements OnInit {
    
     
     
-    //widgetOneRef.setOutput('parentfunction', this.parentfunction);
-    // const widgetTwoRef = this.container.createComponent(WidgetTwoComponent);
-    // widgetTwoRef.setInput('name', 'profanis');
+   
   }
 
 
